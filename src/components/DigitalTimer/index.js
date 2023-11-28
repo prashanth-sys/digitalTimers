@@ -6,7 +6,11 @@ import {Component} from 'react'
 import './index.css'
 
 class DigitalTimer extends Component {
-  state = {isTimeStartAndPause: true, number: 25, seconds: 59}
+  state = {isTimeStartAndPause: true, number: 25, seconds: 0}
+
+  onReset = () => {
+    clearInterval(this.intervelId)
+  }
 
   onStartAndPause = () => {
     const {number, seconds} = this.state
@@ -25,6 +29,10 @@ class DigitalTimer extends Component {
     }))
   }
 
+  incrementSeconds = () => {
+    this.setState(prevState => ({seconds: prevState.seconds + 1}))
+  }
+
   onDecrement = () => {
     this.setState(prevState => ({number: prevState.number - 1}))
   }
@@ -33,8 +41,16 @@ class DigitalTimer extends Component {
     this.setState(prevState => ({number: prevState.number + 1}))
   }
 
-  incrementSeconds = () => {
-    this.setState(prevState => ({seconds: prevState.seconds - 1}))
+  getElapsedSecondsInTimeFormat = () => {
+    const {number, seconds} = this.state
+    const totalRemaniningSeconds = number * 60 - seconds
+    const minutes = Math.floor(totalRemaniningSeconds / 60)
+    console.log(minutes)
+    const second = Math.floor(totalRemaniningSeconds % 60)
+    console.log(second)
+    const stringiFiedMinutes = minutes > 9 ? minutes : 0`${minutes}`
+    const stringiFiedSeconds = second > 9 ? second : 0`${second}`
+    return `${stringiFiedMinutes}:${stringiFiedSeconds}`
   }
 
   render() {
@@ -59,6 +75,7 @@ class DigitalTimer extends Component {
               <p>{runningText}</p>
             </div>
           </div>
+
           <div className="show-container">
             <button
               className="button"
