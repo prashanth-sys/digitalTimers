@@ -1,0 +1,93 @@
+/* Write your CSS here */
+/* Write your CSS here */
+.bg-container {
+  background-image: linear-gradient(to right, #defafe, #cffcf1);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-heading {
+  color: #0f172a;
+  font-family: 'Roboto';
+  font-size: 29px;
+  text-align: center;
+  padding-top: 25px;
+}
+.image {
+  width: 35%;
+}
+.image-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+}
+.pause-image {
+  width: 35%;
+}
+.show-container {
+  display: flex;
+}
+.button {
+  background-color: transparent;
+  border-width: 0px;
+  display: flex;
+}
+.start-pause {
+  color: #0f172a;
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 500;
+}
+.reset-image {
+  width: 35%;
+}
+.time-limit {
+  color: #0f172a;
+  font-size: 15px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.increment-decrement-container {
+  display: flex;
+}
+.increment-button {
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 75px;
+  font-weight: bold;
+}
+.number-button {
+  width: 100px;
+  height: 90px;
+  font-size: 25px;
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #cffcf1, #00d9f5);
+  font-family: 'Roboto';
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.timer-display-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 250px;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.elapsed-time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  border-radius: 100%; /* Use border-radius to create a circle */
+}
+.main-container {
+  display: flex;
+}
